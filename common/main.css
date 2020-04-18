@@ -1,0 +1,83 @@
+.bg-blue {
+	color: #ffffff;
+	background-color: #4079ff;
+}
+
+.bg-cancel {
+	color: #666666;
+	background-color: #eeeeee;
+}
+
+.bg-disabled {
+	color: #ffffff;
+	background-color: #bfd4ff;
+}
+
+.cu-btn[disabled] {
+	color: #ffffff !important;
+	background-color: #d1d3dc !important;
+	opacity: 1;
+}
+
+switch::after {
+	content: "" !important;
+}
+
+switch::before {
+	content: "" !important;
+}
+
+.cu-list>.cu-item .move {
+	width: 150upx;
+}
+
+.cu-list>.cu-item.move-cur {
+	transform: translateX(-150upx);
+	-webkit-transform: translateX(-150upx);
+}
+
+.custom-tag {
+	border: 2upx #000000 solid;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 8upx;
+	border-radius: 8upx;
+	font-size: 24upx;
+	line-height: 32upx;
+	height: 32upx;
+}
+
+.custom-tag.block {
+	border: none;
+	border-radius: 0;
+	color: #FFFFFF;
+	line-height: 42upx;
+	height: 42upx;
+}
+
+.remove-bg {
+	background-color: #ea4343;
+	color: #ffffff;
+}
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.horizontal-center {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+.all-center {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
