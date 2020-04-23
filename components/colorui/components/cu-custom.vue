@@ -17,15 +17,18 @@
 </template>
 
 <script>
+	import { mapState } from 'vuex'
 	export default {
 		data() {
 			return {
 				StatusBar: this.StatusBar,
-				CustomBar: this.CustomBar
+				CustomBar: this.CustomBar,
+				hasNotify: false
 			};
 		},
 		name: 'cu-custom',
 		computed: {
+			...mapState(['notify']),
 			style() {
 				var StatusBar= this.StatusBar;
 				var CustomBar= this.CustomBar;
@@ -49,10 +52,6 @@
 			bgImage: {
 				type: String,
 				default: ''
-			},
-			hasNotify: {
-				type: Boolean,
-				default: false
 			}
 		},
 		methods: {
@@ -65,6 +64,11 @@
 				uni.navigateBack({
 					delta: 1
 				});
+			}
+		},
+		watch: {
+			notify () {
+				this.hasNotify = this.notify
 			}
 		}
 	}
